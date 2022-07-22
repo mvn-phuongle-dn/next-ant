@@ -1,0 +1,238 @@
+.wrapperContent {
+  height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapperCalendar {
+  width: 634px;
+  margin: 20px auto;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.left {
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
+.right {
+  width: 100%;
+  background-color: yellow;
+}
+
+.text {
+  display: none;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 50px;
+  position: absolute;
+}
+
+.wrapperHeader {
+  position: relative;
+  background-color: #0c38f4d1;
+  color: white;
+}
+
+.headerColItem,
+.timeColItem {
+  border: 1px solid grey;
+  width: 90.5px;
+  &:not(:last-child) {
+    border-right: none;
+  }
+}
+
+.headerColItem {
+  text-align: center;
+  &:last-child {
+    color: red;
+  }
+}
+
+.headerColTitle {
+  padding: 10px;
+  margin: 0;
+}
+
+.headerColDate {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.body {
+  position: relative;
+}
+
+.wrapperTimeNameCols {
+  font-size: 12px;
+  position: absolute;
+  left: -40px;
+  top: -9px;
+}
+
+.timeColItem {
+  .timeRowInside {
+    height: 26px;
+    &:not(:last-child) {
+      border-bottom: 1px dashed grey;
+    }
+  }
+  .dateRowInside {
+    height: 86.85px;
+    .date {
+      font-weight: 900;
+      color: grey;
+      text-align: center;
+    }
+  }
+}
+
+.event,
+.eventMonth {
+  cursor: pointer;
+  border-radius: 2px;
+  border: 2px solid;
+  overflow: hidden;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.event {
+  position: absolute;
+  height: 26px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.eventMonthWrapper {
+  height: 61px;
+  .subText {
+    font-weight: 700;
+    text-align: right;
+    font-size: 9px;
+    margin: 0 2px;
+  }
+  .moreOrders {
+    height: calc((100% - 14px) / 2);
+  }
+}
+
+.eventMonth {
+  width: 100%;
+  margin: 0 2px;
+}
+
+.generalEvent {
+  background-color: #b1d0ff;
+  border-color: #7895c0;
+}
+
+.campaignEvent {
+  background-color: #b2eec2;
+  border-color: #80ca95;
+}
+
+.timeSelectedArea,
+.selectedArea {
+  background-color: #b1d0ff;
+  position: absolute;
+  border: 2px solid #7895c0;
+  display: none;
+}
+
+.selectedArea {
+  top: 57px;
+  height: 20px;
+}
+
+.timeSelectedArea {
+  width: 142.5px;
+}
+
+.body {
+  color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  .day {
+    width: 90.5px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-right: none;
+    border-top: none;
+    &:nth-child(7n) {
+      border-right: 1px solid grey;
+      color: red;
+    }
+    position: relative;
+  }
+
+  .dayDisable {
+    color: #bdb8b8 !important;
+  }
+
+  .isHighlight {
+    background-color: pink !important;
+  }
+
+  .isHover {
+    background-color: rgb(249, 230, 233);
+  }
+
+  .isToday {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    border-radius: 50%;
+  }
+
+  .isEvent::after {
+    content: ".";
+    position: absolute;
+    z-index: 1000;
+    bottom: 0px;
+    font-size: 35px;
+    color: #ff7875;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    color: blue;
+  }
+  .wrapperChooseDay {
+    display: flex;
+    flex-direction: column;
+
+    .chooseDay {
+      span {
+        color: blue;
+        font-weight: 600;
+      }
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
+.btnChangeMonth {
+  height: 56px;
+  width: 39px;
+}
